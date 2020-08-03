@@ -1,2 +1,7 @@
-# ritvik.github.io
-Ritvik's home on the internet
+# Ritvik's Homepage
+
+Hello there. I'm Ritvik Vanukuru.
+
+This will soon be my website.
+
+Thanks for dropping by!
