@@ -1,0 +1,35 @@
+---
+layout: projectsarchive
+---
+
+{{ content }}
+
+
+
+<!--
+<div class="entries-{{ page.entries_layout }}">
+  {% include documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=page.entries_layout %}
+</div>
+-->
+
+
+<h2 style="padding-bottom: 1em;">Research & Design</h2>
+
+<div class = "main-projects">
+
+    {% include projects-collection-main.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=page.entries_layout %}
+
+</div>
+
+<hr>
+
+<div id="main" style="margin-top: 0px;"></div>
+
+<h2 style="padding-bottom: 1em;">Experiments & Other Stuff</h2>
+
+<div class = "side-projects">
+
+     {% include projects-collection-side.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=page.entries_layout %}
+
+
+</div>

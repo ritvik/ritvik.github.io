@@ -1,0 +1,9 @@
+<!--
+{%- for post in site.tags[include.taxonomy] -%}
+  {% include archive-single.html %}
+{%- endfor -%}
+-->
+
+{%- for post in site.tags[page.tags] -%}
+  {% include archive-single.html %}
+{%- endfor -%}

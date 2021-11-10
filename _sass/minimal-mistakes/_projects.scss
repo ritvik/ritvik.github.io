@@ -1,0 +1,614 @@
+/* ==========================================================================
+   projects
+   ========================================================================== */
+
+.projects {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include breakpoint($large) {}
+
+    @include breakpoint($x-large) {}
+}
+
+
+
+.projects__item {
+
+    position: relative;
+
+    height: 100%;
+
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+
+
+    a {
+        position: relative;
+        z-index: 10;
+    }
+
+    a[rel="permalink"] {
+        position: static;
+    }
+}
+
+.projects__subtitle {
+    //margin: 1.414em 0 0;
+
+    padding-bottom: 0.5em;
+    font-size: $type-size-4;
+    color: $muted-text-color;
+    border-bottom: 1px solid $border-color;
+
+    + .list__item .projects__item-title {
+        margin-top: 0.5em;
+    }
+}
+
+.projects__item-title {
+    margin-bottom: 0em;
+    font-family: $sans-serif-narrow;
+    line-height: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 0em;
+    margin-right: 0em;
+
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    a[rel="permalink"]::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    a + a {
+        opacity: 0.5;
+    }
+}
+
+/* remove border*/
+.page__content {
+    .projects__item-title {
+        margin-top: 2em;
+        border-bottom: none;
+
+        a {
+            text-decoration: none;
+        }
+
+    }
+}
+
+.projects__item-excerpt {
+    margin-top: 0;
+    font-size: $type-size-5;
+    margin: 0em 0em 0em 0em;
+    //margin-left: 0.5em;
+    //margin-right: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 4em;
+
+    & + p {
+        text-indent: 0;
+    }
+
+    a {
+        position: relative;
+    }
+}
+
+.projects__item-duration {
+    font-style: italic;
+
+    font-size: $type-size-6;
+
+    @include breakpoint($small) {
+        font-size: $type-size-6;
+    }
+
+    @include breakpoint($medium) {
+        font-size: $type-size-6;
+    }
+
+    @include breakpoint($large) {
+        font-size: $type-size-7;
+    }
+
+    @include breakpoint($x-large) {
+        font-size: $type-size-7;
+    }
+
+    @include breakpoint($max-width) {
+        font-size: $type-size-7;
+    }
+
+    margin: 0em 0em 0em 0em;
+    //margin-left: 0.5em;
+    //margin-right: 0.5em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+
+    margin-top: 1em;
+    position: absolute;
+    bottom: 0;
+}
+
+.projects__item-teaser {
+    position: relative;
+    //border-radius: $border-radius*3;
+    overflow: hidden;
+}
+
+.projects__item-caption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    //margin: 0 auto;
+    //padding: 2px 5px;
+    color: #fff;
+    font-family: $caption-font-family;
+    font-size: $type-size-8;
+    background: #000;
+    text-align: right;
+    z-index: 5;
+    opacity: 0.5;
+    border-radius: $border-radius 0 0 0;
+
+    @include breakpoint($large) {
+        //padding: 5px 10px;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+/*
+   List view
+   ========================================================================== */
+
+.list__item {
+    .page__meta {
+        margin: 0 0 4px;
+        font-size: 0.6em;
+    }
+}
+
+/*
+   Grid view
+   ========================================================================== */
+
+.projects {
+
+    .grid__wrapper {
+        /* extend grid elements to the right */
+
+
+        @include breakpoint($large) {
+            margin-right: -1 * $right-sidebar-width-narrow;
+        }
+
+        @include breakpoint($x-large) {
+            margin-right: -1 * $right-sidebar-width;
+        }
+    }
+}
+
+
+.main-projects {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: 1em;
+}
+
+.main_projects_grid__item {
+
+
+    margin-bottom: 1em;
+
+    .page__meta {
+        margin: 0 0 4px;
+        font-size: 0.6em;
+    }
+
+    .projects__item-title {
+        margin-top: 0.5em;
+        font-size: $type-size-5;
+
+        @include breakpoint($small) {
+            font-size: $type-size-5;
+        }
+
+        @include breakpoint($medium) {
+            font-size: $type-size-5;
+        }
+
+        @include breakpoint($large) {
+            font-size: $type-size-6;
+        }
+
+        @include breakpoint($x-large) {
+            font-size: $type-size-6;
+        }
+
+        @include breakpoint($max-width) {
+            font-size: $type-size-6;
+        }
+
+        a {
+            color: $text-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .projects__item-excerpt {
+        //display: none;
+        font-size: $type-size-5;
+
+        @include breakpoint($small) {
+            font-size: $type-size-5;
+        }
+
+        @include breakpoint($medium) {
+            font-size: $type-size-5;
+        }
+
+        @include breakpoint($large) {
+            font-size: $type-size-6;
+        }
+    }
+
+    .projects__item-teaser {
+
+
+        height: 250px;
+
+        @include breakpoint($small) {
+
+            height: 250px;
+
+        }
+
+        @include breakpoint($medium) {
+            height: 200px;
+
+        }
+
+
+    }
+}
+
+.side-projects {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: 1em;
+}
+
+.side_projects_grid__item {
+
+
+    margin-bottom: 1em;
+
+
+    .page__meta {
+        margin: 0 0 4px;
+        font-size: 0.6em;
+    }
+
+    .projects__item-title {
+        margin-top: 0.5em;
+        font-size: $type-size-5;
+
+        @include breakpoint($small) {
+            font-size: $type-size-5;
+        }
+
+        @include breakpoint($medium) {
+            font-size: $type-size-5;
+        }
+
+        @include breakpoint($large) {
+            font-size: $type-size-6;
+        }
+
+        @include breakpoint($x-large) {
+            font-size: $type-size-6;
+        }
+
+        @include breakpoint($max-width) {
+            font-size: $type-size-6;
+        }
+
+        a {
+            color: $text-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .projects__item-excerpt {
+        //display: none;
+        font-size: $type-size-5;
+
+        @include breakpoint($small) {
+            font-size: $type-size-5;
+        }
+
+        @include breakpoint($medium) {
+            font-size: $type-size-5;
+        }
+
+        @include breakpoint($large) {
+            font-size: $type-size-6;
+        }
+    }
+
+    .projects__item-teaser {
+
+        height: 250px;
+
+        @include breakpoint($small) {
+
+            height: 250px;
+
+        }
+
+        @include breakpoint($medium) {
+            height: 200px;
+
+        }
+
+
+    }
+}
+
+/*
+   Features
+   ========================================================================== */
+
+.feature__wrapper {
+    @include clearfix();
+    margin-bottom: 2em;
+    border-bottom: 1px solid $border-color;
+
+    .projects__item-title {
+        margin-bottom: 0;
+    }
+}
+
+.feature__item {
+    position: relative;
+    margin-bottom: 2em;
+    font-size: 1.125em;
+
+    @include breakpoint($small) {
+        float: left;
+        margin-bottom: 0;
+        width: span(4 of 12);
+
+        &:nth-child(3n + 1) {
+            clear: both;
+            margin-left: 0;
+        }
+
+        &:nth-child(3n + 2) {
+            clear: none;
+            margin-left: gutter(of 12);
+        }
+
+        &:nth-child(3n + 3) {
+            clear: none;
+            margin-left: gutter(of 12);
+        }
+
+        .feature__item-teaser {
+            max-height: 200px;
+            overflow: hidden;
+        }
+    }
+
+    .projects__item-body {
+        padding-left: gutter(1 of 12);
+        padding-right: gutter(1 of 12);
+    }
+
+    a.btn::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &--left {
+        position: relative;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        clear: both;
+        font-size: 1.125em;
+
+        .projects__item {
+            float: left;
+        }
+
+        .projects__item-teaser {
+            margin-bottom: 2em;
+        }
+
+        a.btn::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        @include breakpoint($small) {
+            .projects__item-teaser {
+                float: left;
+                width: span(5 of 12);
+            }
+
+            .projects__item-body {
+                float: right;
+                padding-left: gutter(0.5 of 12);
+                padding-right: gutter(1 of 12);
+                width: span(7 of 12);
+            }
+        }
+    }
+
+    &--right {
+        position: relative;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        clear: both;
+        font-size: 1.125em;
+
+        .projects__item {
+            float: left;
+        }
+
+        .projects__item-teaser {
+            margin-bottom: 2em;
+        }
+
+        a.btn::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        @include breakpoint($small) {
+            text-align: right;
+
+            .projects__item-teaser {
+                float: right;
+                width: span(5 of 12);
+            }
+
+            .projects__item-body {
+                float: left;
+                width: span(7 of 12);
+                padding-left: gutter(0.5 of 12);
+                padding-right: gutter(1 of 12);
+            }
+        }
+    }
+
+    &--center {
+        position: relative;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        clear: both;
+        font-size: 1.125em;
+
+        .projects__item {
+            float: left;
+            width: 100%;
+
+        }
+
+        .projects__item-teaser {
+            margin-bottom: 2em;
+        }
+
+        a.btn::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        @include breakpoint($small) {
+            text-align: center;
+
+            .projects__item-teaser {
+                margin: 0 auto;
+                width: span(5 of 12);
+            }
+
+            .projects__item-body {
+                margin: 0 auto;
+                width: span(7 of 12);
+            }
+        }
+    }
+}
+
+/* Place inside an projects layout */
+
+.projects {
+    .feature__wrapper {
+        .projects__item-title {
+            margin-top: 0.25em;
+            font-size: 1em;
+        }
+    }
+
+    .feature__item,
+    .feature__item--left,
+    .feature__item--center,
+    .feature__item--right {
+        font-size: 1em;
+    }
+}
+
+/*
+   Wide Pages
+   ========================================================================== */
+
+.wide {
+    .projects {
+        @include breakpoint($large) {
+            padding-right: 0;
+        }
+
+        @include breakpoint($x-large) {
+            padding-right: 0;
+        }
+    }
+}
+
+/* Place inside a single layout */
+
+.layout--single {
+    .feature__wrapper {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,15 @@
+# main links
+main:
+   - title: "Dual Phone AR"
+     authors: ""
+     venue: ""
+     PDF: ""
+     url: /projects
+   - title: "Publications"
+     url: /publications
+   - title: "Blog"
+     url: /blog
+   - title: "Music"
+     url: /music
+   - title: "CV"
+     url: /cv

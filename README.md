@@ -1,7 +1,3 @@
-# Ritvik's Homepage
+# Rishi's website
 
-Hello there. I'm Ritvik Vanukuru.
-
-This will soon be my website.
-
-Thanks for dropping by!
+Based on Minimal Mistakes, and powered by Jekyll.
